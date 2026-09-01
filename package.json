@@ -1,0 +1,38 @@
+{
+  "name": "for-you",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b --noCheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "optimize": "npm run optimize:img && npm run optimize:vid",
+    "optimize:img": "node scripts/optimize-images.mjs",
+    "optimize:vid": "node scripts/optimize-videos.mjs",
+    "make:og": "node scripts/make-og.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "check:quotes": "node scripts/check-quotes.mjs"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "lucide-react": "^0.469.0",
+    "motion": "^12.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.62.1",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0"
+  }
+}
